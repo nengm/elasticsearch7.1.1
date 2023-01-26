@@ -242,13 +242,13 @@ permission java.lang.RuntimePermission "setContextClassLoader";
 org.elasticsearch.bootstrap.Elasticsearch
 ```
 
-![image-20230126101114235](C:\Users\mn\AppData\Roaming\Typora\typora-user-images\image-20230126101114235.png)
+![img](https://docimg4.docs.qq.com/image/AgAABS4iltBBGjyIzolNh6puE3V5E3qS.png?w=1355&h=876)
 
 ## 13、启动
 
 至此elasticsearch源码编译成功，并且已经启动。
 
-![image-20230126104239425](C:\Users\mn\AppData\Roaming\Typora\typora-user-images\image-20230126104239425.png)
+![img](https://docimg4.docs.qq.com/image/AgAABS4iltDXNwz9bGBOuapw6CVHf4NN.png?w=1872&h=545)
 
 # 安装kibana
 
