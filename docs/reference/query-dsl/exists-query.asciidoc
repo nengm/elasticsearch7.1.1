@@ -1,0 +1,62 @@
+[[query-dsl-exists-query]]
+=== Exists Query
+
+Returns documents that contain a value other than `null` or `[]` in a provided
+field.
+
+[[exists-query-ex-request]]
+==== Example request
+
+[source,js]
+----
+GET /_search
+{
+    "query": {
+        "exists": {
+            "field": "user"
+        }
+    }
+}
+----
+// CONSOLE
+
+[[exists-query-top-level-params]]
+==== Top-level parameters for `exists`
+`field`::
+Name of the field you wish to search.
++
+To return a document, this field must exist and contain a value other
+than `null` or `[]`. These values can include:
++
+* Empty strings, such as `""` or `"-"`
+* Arrays containing `null` and another value, such as `[null, "foo"]`
+* A custom <<null-value, `null-value`>>, defined in field mapping
+
+[[exists-query-notes]]
+==== Notes
+
+[[find-docs-null-values]]
+===== Find documents with null values
+To find documents that contain only `null` values or `[]` in a provided field,
+use the `must_not` <<query-dsl-bool-query, boolean query>> with the `exists`
+query.
+
+The following search returns documents that contain only `null` values or `[]`
+in the `user` field.
+
+[source,js]
+----
+GET /_search
+{
+    "query": {
+        "bool": {
+            "must_not": {
+                "exists": {
+                    "field": "user"
+                }
+            }
+        }
+    }
+}
+----
+// CONSOLE
