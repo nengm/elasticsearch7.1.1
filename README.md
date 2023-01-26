@@ -180,7 +180,7 @@ buildSrc\src\main\groovy\org\elasticsearch\gradle\BuildPlugin.groovy
 
 ![img](https://docimg10.docs.qq.com/image/AgAABS4iltDQ-wTrek5Ojaqf08mM1EqK.png?w=1532&h=562)
 
-![image-20230126095300404](C:\Users\mn\AppData\Roaming\Typora\typora-user-images\image-20230126095300404.png)
+![img](https://docimg2.docs.qq.com/image/AgAABS4iltBiu4pMGHtBx7pTpmkj3viq.png?w=767&h=822)
 
 ## 10、libs模块的类加载问题
 
