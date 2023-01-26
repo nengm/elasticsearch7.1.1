@@ -332,7 +332,7 @@ cmd敲入gradle jar，编译rescore插件为jar
 
 在elasticsearch根目录下找到distributions，进入distributions，再进入pluins，新建example-rescore。
 
-![image-20230126110504265](C:\Users\mn\AppData\Roaming\Typora\typora-user-images\image-20230126110504265.png)
+![img](https://docimg4.docs.qq.com/image/AgAABS4iltBpHGXfBmtOq57x30NakWpN.png?w=648&h=179)
 
 ## 5、将3步骤中生成的jar放入4步骤中的文件夹中
 
