@@ -504,6 +504,87 @@ rescore插件下面example有两个参数
 
 ![img](https://docimg8.docs.qq.com/image/AgAABS4iltBgLvYtOV1PEoqpcRBDX45q.png?w=852&h=198)
 
+## 13、继续分析
+
+可以看到我们拿到的并不是商品名称，是经过了一次分词的结果。
+
+如果直接拿到productname，一个方式是把productname设置为keyword，另一个方式是添加个字段productname2，设置为keyword。
+
+## 14、测试
+
+新增索引goods2
+
+```
+PUT goods2
+{
+  "mappings": {
+    "properties": {
+      "productname": { 
+        "type": "text",
+        "fielddata":"true"
+      },
+      "productname2": { 
+        "type": "keyword"
+      },
+      "brandname": { 
+        "type": "keyword"
+      },
+      "id": { 
+        "type": "keyword"
+      }
+    }
+  }
+}
+
+POST /goods2/_doc/1
+{
+  "id":"1",
+  "productname":"联想笔记本",
+  "productname2":"联想笔记本",
+  "brandname":"联想"
+}
+
+POST /goods2/_doc/2
+{
+  "id":"2",
+  "productname":"dell笔记本",
+  "productname2":"dell笔记本",
+  "brandname":"dell"
+}
+```
+
+查询
+
+```
+GET goods2/_search
+{
+    "_source":{
+        "includes":["productname","brandname"]
+  },
+  "query": {
+        "multi_match": {
+        "query":  "笔记本",
+        "fields": [ "productname" ]
+    }
+  },
+  "size":100,
+    "rescore":{
+        "window_size":10000,
+        "example":{
+            "factor":10,
+            "factor_field":"productname2"
+        }
+        
+    }
+}
+```
+
+现在就OK了
+
+![img](https://docimg6.docs.qq.com/image/AgAABS4iltDSJylx5LRIKpS3jIf2BDqh.png?w=527&h=168)
+
+当然我还没发现如果调整分词的顺序，如果发现再更新github。
+
 # 项目说明
 
 此项目已经进行上面的修改，同时distributions里面也加入了发行版的modules。
