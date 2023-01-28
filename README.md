@@ -314,11 +314,11 @@ POST /goods/_doc/2
 
 ![img](https://docimg5.docs.qq.com/image/AgAABS4iltC1SvZuHGJM_6PE_gQtSq_o.png?w=1235&h=252)
 
-cmd敲入gradle jar，编译rescore插件为jar
+cmd敲入gradle assemble，编译rescore插件为jar
 
-![img](https://docimg7.docs.qq.com/image/AgAABS4iltB7OnYW1vFFBpV-NV8TAb1R.png?w=1162&h=312)
+![img](https://docimg10.docs.qq.com/image/AgAABS4iltDLZlBAAIhHUJ5trvMk0Dn0.png?w=1141&h=196)
 
-![img](https://docimg1.docs.qq.com/image/AgAABS4iltDPSICWvwlLEoHsQa2ao_uM.png?w=990&h=395)
+![img](https://docimg6.docs.qq.com/image/AgAABS4iltDw-eh-32FK-KR4erTLQ5f6.png?w=992&h=418)
 
 ## 2、结束后生成一个build文件夹
 
@@ -338,62 +338,15 @@ cmd敲入gradle jar，编译rescore插件为jar
 
 将3步骤中生成的jar放入4步骤中的文件夹中，同时把-7.1.1-SNAPSHOT去掉。
 
-文件夹下新建文件plugin-descriptor.properties
+同时把build\generated-resources下面的plugin-descriptor.properties复制到4中的文件夹中。
+
+![img](https://docimg8.docs.qq.com/image/AgAABS4iltBoE2RxTLVEpb6cwaExtHgF.png?w=842&h=189)
+
+
 
 ![img](https://docimg7.docs.qq.com/image/AgAABS4iltCxdCtbV6BIFIlo44fdjxS2.png?w=1077&h=166)
 
-文件内容为：
 
-是描述这个插件的。
-
-```
-# Elasticsearch plugin descriptor file
-# This file must exist as 'plugin-descriptor.properties' inside a plugin.
-#
-### example plugin for "foo"
-#
-# foo.zip <-- zip file for the plugin, with this structure:
-# |____   <arbitrary name1>.jar <-- classes, resources, dependencies
-# |____   <arbitrary nameN>.jar <-- any number of jars
-# |____   plugin-descriptor.properties <-- example contents below:
-#
-# classname=foo.bar.BazPlugin
-# description=My cool plugin
-# version=6.0
-# elasticsearch.version=6.0
-# java.version=1.8
-#
-### mandatory elements for all plugins:
-#
-# 'description': simple summary of the plugin
-description=An example plugin implementing rescore and verifying that plugins *can* implement rescore
-#
-# 'version': plugin's version
-version=7.1.1-SNAPSHOT
-#
-# 'name': the plugin name
-name=example-rescore
-#
-# 'classname': the name of the class to load, fully-qualified.
-classname=org.elasticsearch.example.rescore.ExampleRescorePlugin
-#
-# 'java.version': version of java the code is built against
-# use the system property java.specification.version
-# version string must be a sequence of nonnegative decimal integers
-# separated by "."'s and may have leading zeros
-java.version=1.8
-#
-# 'elasticsearch.version': version of elasticsearch compiled against
-elasticsearch.version=7.1.1
-### optional elements for plugins:
-#
-#  'extended.plugins': other plugins this plugin extends through SPI
-extended.plugins=
-#
-# 'has.native.controller': whether or not the plugin has a native controller
-has.native.controller=false
-
-```
 
 ## 6、elasticsearch工程重启下
 
