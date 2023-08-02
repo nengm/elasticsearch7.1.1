@@ -48,7 +48,7 @@ git checkout 7.1
 
 一定要用jdk11以上，我选的是jdk12
 
-![img](https://docimg3.docs.qq.com/image/DJw6wK69y9katyu6rwhPeQ.png?w=1283&h=832)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image.png)
 
 ## 3、修改maven源
 
@@ -56,7 +56,7 @@ http://maven.aliyun.com/nexus/content/groups/public/
 
 ### elasticsearch\buildSrc\build.gradle
 
-![img](https://docimg7.docs.qq.com/image/BUb0qWmvkVqI4ED16tFtjg.png?w=869&h=286)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image2.png)
 
 ```
 /*****************************************************************************
@@ -80,7 +80,7 @@ if (project == rootProject) {
 
 ### elasticsearch\distribution\packages\build.gradle
 
-![img](https://docimg9.docs.qq.com/image/e7DqnNt_m5_OoMCZZ5LiSQ.png?w=797&h=250)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image3.png)
 
 ```
 buildscript {
@@ -100,7 +100,7 @@ buildscript {
 
 ### elasticsearch\plugins\repository-s3\build.gradle
 
-![img](https://docimg2.docs.qq.com/image/Q1c7oFDf2MfZBWi_1P9S6g.png?w=712&h=228)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image4.png)
 
 ```
 buildscript {
@@ -146,29 +146,29 @@ allprojects{
 
 buildSrc\src\main\groovy\org\elasticsearch\gradle\BuildPlugin.groovy
 
-![img](https://docimg7.docs.qq.com/image/JHkTZ158-ll2kA9VHOLbVQ.png?w=1794&h=592)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image5.png)
 
-![img](https://docimg2.docs.qq.com/image/aXd6-ZDk9odS-Uzem-hjng.png?w=1822&h=588)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image6.png)
 
 ## 6、elasticsearch源码编译
 
-进入存放源码的文件夹进行编译![img](https://docimg3.docs.qq.com/image/AgAABS4iltB6B31IH6BNrIqngkeBVRi8.png?w=709&h=95)
+进入存放源码的文件夹进行编译![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image7.png)
 
 因为我的已经编译过一次了，所以很快，正常的话是非常慢的。
 
-![img](https://docimg10.docs.qq.com/image/AgAABS4iltAmq7_AZdNE1IU-3pw5vwcp.png?w=1069&h=634)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image8.png)
 
 ## 7、经过漫长的等待
 
 经过漫长的等待，会生成一个ipr的文件，我们双击打开导入elasticsearch到idea中。
 
-![img](https://docimg2.docs.qq.com/image/ktIXX5Zous2FHk8ljvKV8A.png?w=1238&h=817)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image9.png)
 
 ## 8、Import Gradle Project
 
 点击Event log，然后点击Import Gradle Project
 
-![img](https://docimg10.docs.qq.com/image/VLeL__wzQVXW-Q9Sp0tacQ.png?w=1845&h=1034)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image10.png)
 
 ## 9、设置modules
 
@@ -178,17 +178,15 @@ buildSrc\src\main\groovy\org\elasticsearch\gradle\BuildPlugin.groovy
 
 否则会出现下载的错误。
 
-![img](https://docimg10.docs.qq.com/image/AgAABS4iltDQ-wTrek5Ojaqf08mM1EqK.png?w=1532&h=562)
-
-![img](https://docimg2.docs.qq.com/image/AgAABS4iltBiu4pMGHtBx7pTpmkj3viq.png?w=767&h=822)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image16.png)
 
 ## 10、libs模块的类加载问题
 
 如果没有出现忽略，如果出现下面的错误，这个类在libs模块，server模块中原来的gradle配置是compileOnly，改为compile
 
-![img](https://docimg3.docs.qq.com/image/AgAABS4iltCiY_8wNfZHmaDiPl637pPk.png?w=1298&h=512)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image17.png)
 
-![img](https://docimg9.docs.qq.com/image/AgAABS4iltC4LqvGaIlP0KtN0BTlx1rG.png?w=1207&h=702)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image18.png)
 
 ## 11、修改权限，必须要做的。
 
