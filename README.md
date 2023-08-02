@@ -312,7 +312,7 @@ POST /goods/_doc/2
 
 ![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image24.png)
 
-cmd敲入gradle assemble，编译rescore插件为jar
+cmd敲入gradle jar，编译rescore插件为jar
 
 ![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image25.png)
 
@@ -320,17 +320,17 @@ cmd敲入gradle assemble，编译rescore插件为jar
 
 ## 2、结束后生成一个build文件夹
 
-![img](https://docimg6.docs.qq.com/image/AgAABS4iltDeQihM23JF3Joah3a9m1y-.png?w=1033&h=313)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image27.png)
 
 ## 3、找到distributions下面的jar
 
-![img](https://docimg6.docs.qq.com/image/AgAABS4iltDWO_lA1sBBt6LvLImrMUbu.png?w=1090&h=190)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image28.png)
 
 ## 4、在elasticsearch根目录下
 
 在elasticsearch根目录下找到distributions，进入distributions，再进入pluins，新建example-rescore。
 
-![img](https://docimg4.docs.qq.com/image/AgAABS4iltBpHGXfBmtOq57x30NakWpN.png?w=648&h=179)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image29.png)
 
 ## 5、将3步骤中生成的jar放入4步骤中的文件夹中
 
@@ -338,11 +338,11 @@ cmd敲入gradle assemble，编译rescore插件为jar
 
 同时把build\generated-resources下面的plugin-descriptor.properties复制到4中的文件夹中。
 
-![img](https://docimg8.docs.qq.com/image/AgAABS4iltBoE2RxTLVEpb6cwaExtHgF.png?w=842&h=189)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image30.png)
 
 
 
-![img](https://docimg7.docs.qq.com/image/AgAABS4iltCxdCtbV6BIFIlo44fdjxS2.png?w=1077&h=166)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image31.png)
 
 
 
