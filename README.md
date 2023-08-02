@@ -198,11 +198,11 @@ org.elasticsearch.bootstrap.StartupException: java.security.AccessControlExcepti
 
 找到jdk所在路径：
 
-![img](https://docimg4.docs.qq.com/image/AgAABS4iltC73NMT8NpGgpFBvyA_tnBj.png?w=794&h=777)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image19.png)
 
 找到conf下面的security
 
-![img](https://docimg6.docs.qq.com/image/AgAABS4iltAMcR3x__1EZLirrcLqIGiZ.png?w=1216&h=338)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image20.png)
 
 打开后最后添加
 
@@ -212,7 +212,7 @@ permission java.lang.RuntimePermission "createClassLoader";
 permission java.lang.RuntimePermission "setContextClassLoader";
 ```
 
-![img](https://docimg6.docs.qq.com/image/AgAABS4iltAbk0u6zutKx74AOfojA_Cs.png?w=968&h=874)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image21.png)
 
 ## 12、设置启动项
 
@@ -240,7 +240,7 @@ permission java.lang.RuntimePermission "setContextClassLoader";
 org.elasticsearch.bootstrap.Elasticsearch
 ```
 
-![img](https://docimg4.docs.qq.com/image/AgAABS4iltBBGjyIzolNh6puE3V5E3qS.png?w=1355&h=876)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image13.png)
 
 ## 13、启动
 
@@ -254,11 +254,11 @@ org.elasticsearch.bootstrap.Elasticsearch
 
 修改kibana的conf，并且启动
 
-![img](https://docimg9.docs.qq.com/image/AgAABS4iltBz2cJhHoJMN48S0RDha6Co.png?w=856&h=589)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image22.png)
 
 进入kibana的bin下，点击kibana.bat
 
-![img](https://docimg6.docs.qq.com/image/AgAABS4iltC8VFZePgREH6xvdFBs9EGF.png?w=1390&h=937)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image23.png)
 
 # 测试准备
 
@@ -310,13 +310,13 @@ POST /goods/_doc/2
 
 进入plugins\examples\rescore
 
-![img](https://docimg5.docs.qq.com/image/AgAABS4iltC1SvZuHGJM_6PE_gQtSq_o.png?w=1235&h=252)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image24.png)
 
 cmd敲入gradle assemble，编译rescore插件为jar
 
-![img](https://docimg10.docs.qq.com/image/AgAABS4iltDLZlBAAIhHUJ5trvMk0Dn0.png?w=1141&h=196)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image25.png)
 
-![img](https://docimg6.docs.qq.com/image/AgAABS4iltDw-eh-32FK-KR4erTLQ5f6.png?w=992&h=418)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image26.png)
 
 ## 2、结束后生成一个build文件夹
 
