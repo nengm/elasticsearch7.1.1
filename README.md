@@ -330,19 +330,13 @@ cmd敲入gradle jar，编译rescore插件为jar
 
 在elasticsearch根目录下找到distributions，进入distributions，再进入pluins，新建example-rescore。
 
-![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image29.png)
-
 ## 5、将3步骤中生成的jar放入4步骤中的文件夹中
 
 将3步骤中生成的jar放入4步骤中的文件夹中，同时把-7.1.1-SNAPSHOT去掉。
 
 同时把build\generated-resources下面的plugin-descriptor.properties复制到4中的文件夹中。
 
-![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image30.png)
-
-
-
-![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image31.png)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image29.png)
 
 
 
@@ -354,7 +348,7 @@ cmd敲入gradle jar，编译rescore插件为jar
 
 E:\github\elasticsearch\elasticsearch-7.1.1\plugins\examples\rescore\src\main\java\org\elasticsearch\example\rescore\ExampleRescoreBuilder.java
 
-![img](https://docimg8.docs.qq.com/image/AgAABS4iltD3XjyMBARAPaBHuem-SpF3.png?w=1673&h=842)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image30.png)
 
 ## 8、使用kibana进行查询
 
@@ -386,7 +380,7 @@ GET goods/_search
 
 说明我们的插件完全已经生效，我们接下去看看如何个性化下实现我们的功能。
 
-![img](https://docimg2.docs.qq.com/image/AgAABS4iltC_pnOJPP9A966yAnGle90Q.png?w=1636&h=822)
+![img](https://github.com/nengm/picturebed/blob/main/ELasticsearch/image31.png)
 
 ## 10、分析
 
